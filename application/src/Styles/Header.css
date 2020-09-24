@@ -1,0 +1,20 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #8F8F8F;
+    height: 60px;
+    align-items: center;
+    position: sticky;
+    top:0px;
+}
+
+#header-title{
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+nav span{
+    margin: 0px 10px;
+}

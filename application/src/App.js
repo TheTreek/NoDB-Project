@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Header from './Components/Header';
+import axios from 'axios';
+import Display from './Components/Display';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      currentKnife: '-1',
+      knifeList: []
+    }
+  }
+
+  componentDidMount(){
+    //Set state properties from API -----------------------------------------------
+    axios.get('/api/knives')
+      .then(res =>{
+        this.setState({currentKnife: res.data[0].id, knifeList: res.data});
+      }).catch(err=>console.log(err));
+  }
+  
+  render(){
+    return (
+      <div className="App">
+        <Header/>
+        <div className="body-container">
+          <Display
+            knifeId={this.state.currentKnife}
+            />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
