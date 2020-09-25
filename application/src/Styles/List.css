@@ -1,0 +1,14 @@
+#list{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px){
+    #list{
+        justify-content: center;
+    }
+}

@@ -14,6 +14,14 @@ app.get('/api/knives', baliCont.getList);
 //Get specific knife
 app.get('/api/knife/:id', baliCont.getKnife);
 
+//Add a knife
+app.post('/api/knife/add', baliCont.addKnife);
+
+//Update a knife
+app.put('/api/knife/update/:id', baliCont.editKnife)
+
+//Delete a knife
+app.delete('/api/knife/delete/:id', baliCont.deleteKnife)
 
 
 //Start server -----------------------------------

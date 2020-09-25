@@ -8,9 +8,10 @@ class Header extends Component{
             <header className='header'>
                 <span id='header-title'>BaliDex</span>
                 <nav>
-                    <span>ADD</span>
-                    <span>EDIT</span>
-                    <span>DELETE</span>
+                    {this.props.add ? <span id='cancel-btn' onClick={this.props.cancelFN}>CANCEL</span>:<span id='add-btn' onClick={this.props.addFN}>ADD</span>}
+                    {this.props.edit ? <span id='cancel-btn' onClick={this.props.cancelFN}>CANCEL</span>:<span id='edit-btn' onClick={this.props.editFN}>EDIT</span>}
+                    
+                    <span id='delete-btn' onClick={this.props.deleteFN}>DELETE</span>
                 </nav>
             </header>
         );

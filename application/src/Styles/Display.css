@@ -23,6 +23,7 @@
 #display-img{
     max-width:100%;
     max-height:100%;
+    border-radius:10px;
 }
 
 #dis-img-container{
@@ -64,7 +65,7 @@
 
 @media screen and (max-width: 1140px){
     #display{
-        width:90%;
+        width:100%;
     }
 
     #dis-img-container{
