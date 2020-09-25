@@ -17,7 +17,7 @@ class KnifeForm extends Component{
     }
 
     componentDidMount(){
-  this.props.getDataFN(this.props.knifeId);
+        this.props.getDataFN(this.props.knifeId);
     }
 
     componentDidUpdate(preData){
