@@ -1,5 +1,6 @@
 const express = require('express');
 const baliCont = require('./controllers/bali');
+const path = require('path');
 
 const app = express();
 app.use(express.json());
